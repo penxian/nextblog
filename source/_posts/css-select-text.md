@@ -2,6 +2,7 @@
 title: CSS禁用文字选中
 date: 2015-04-10 16:34
 tag: css
+categories: 代码片段
 ---
 ```css
 .none_select{

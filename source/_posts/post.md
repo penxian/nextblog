@@ -2,6 +2,7 @@
 title: 使用sftp报错All configured authentication methods failed
 date: 2022-07-07 22:27:02
 tags: [hexo, sftp]
+categories: 工作日志
 ---
  之前自己配置hexo deploy 是通过sftp来上次静态文件的，而服务器则是用宝塔来管理，今天直接deploy一下发现报错来
  <!-- more -->

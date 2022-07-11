@@ -400,4 +400,4 @@ fetchData(query).then(data => {
 PS:需要复习 Primose、箭头函数、let/const和其他ES6/ES2015功能，请阅读我的博客和视频。
 PS2：如果你更喜欢观看视频的话，请登录Node.University’s[ES6/ES2015 course](https://node.university/p/es6),还有即将来临的[ES7和ES8视频课程](https://node.university/p/es7-es8)
 
-原文地址：https://node.university/blog/498412/es7-es8?utm_source=javascriptweekly&utm_medium=email  【爱在西元前翻译】
+原文地址: [点击这里](https://node.university/blog/498412/es7-es8?utm_source=javascriptweekly&utm_medium=email) 【爱在西元前翻译】

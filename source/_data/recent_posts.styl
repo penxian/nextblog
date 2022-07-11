@@ -1,0 +1,54 @@
+@keyframes icon-arrow {
+  0%, 100% {
+    transform: translate(-2px, 0) 
+  }
+
+  10%, 30% {
+    transform: translate(0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate(2px, 0);
+  }
+
+  50%, 70% {
+    transform: translate(2px, 0);
+  }
+}
+.widget-wrap{
+    +mobile(){
+        display none
+    }
+    .widget-title{
+        padding: 5px 20px
+    }
+    .widget{
+        ul{
+            list-style: none
+            padding: 0 20px
+            font-size: 14px
+            margin: 0
+            &>li{
+                .handle{
+                    width: 16px
+                    height: 16px
+                    display: inline-block
+                   
+                }
+                 &:hover{
+                    .handle{
+                        animation: icon-arrow 1.33s ease-in-out infinite
+                    }
+                }
+                line-height: 22px
+                display: inline-block
+                overflow: hidden
+                width: 100%
+                white-space: nowrap
+                text-overflow: ellipsis
+                list-style: decimal
+            }
+        }
+        padding-bottom: 20px
+    }
+}

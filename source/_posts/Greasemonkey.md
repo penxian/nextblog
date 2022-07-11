@@ -2,6 +2,7 @@
 title: 笔记
 date: 2022年4月8日
 tag: js
+categories: 工作日志
 ---
 
 第一步：
