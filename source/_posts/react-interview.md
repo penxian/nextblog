@@ -115,3 +115,40 @@ Redux 是一个为 JavaScript 应用设计的，可预测的状态容器。
 - `setState`只在合成事件和钩子函数中是“异步”的，在原生事件和`setTimeout` 中都是同步的
 - `setState` 的“异步”并不是说内部由异步代码实现，其实本身执行的过程和代码都是同步的，只是合成事件和钩子函数的调用顺序在更新之前，导致在合成事件和钩子函数中没法立马拿到更新后的值，形成了所谓的“异步”，当然可以通过第二个参数`setState(partialState, callback)`中的*callback*拿到更新后的结果
 - `setState` 的批量更新优化也是建立在“异步”（合成事件、钩子函数）之上的，在原生事件和setTimeout 中不会批量更新，在“异步”中如果对同一个值进行多次`setState`，`setState`的批量更新策略会对其进行覆盖，取最后一次的执行，如果是同时`setState`多个不同的值，在更新时会对其进行合并批量更新
+
+### 11.什么是跨域？如何解决跨域问题？
+浏览器对于javascript的同源策略的限制。
+1. 域名不同  www.jd.com 与 www.taobao.com
+2. 端口不同  www.jd.com:8080 与 www.jd.com:8081
+3. 二级域名不同 item.jd.com 与 miaosha.jd.com
+4. http和https也属于跨域
+
+解决跨域问题的方案
+1. Jsonp
+最早的解决方案，利用script标签可以跨域的原理实现。
+**限制**：
+需要服务的支持
+只能发起GET请求
+2. nginx反向代理
+**思路是**：利用nginx把跨域反向代理为不跨域，支持各种请求方式
+**缺点**：需要在nginx进行额外配置，语义不清晰
+3. CORS
+规范化的跨域请求解决方案，安全可靠。
+**优势**：
+在服务端进行控制是否允许跨域，可自定义规则
+支持各种请求方式
+**缺点**：
+会产生额外的请求
+如果服务器允许跨域，需要在返回的响应头中携带下面信息：
+    ```
+    Access-Control-Allow-Origin: http://manage.handou.com
+    Access-Control-Allow-Credentials: true
+    Content-Type: text/html; charset=utf-8
+    ```
+Access-Control-Allow-Origin：允许哪个域名进行跨域，是一个具体域名或者*（代表任意域名）
+Access-Control-Allow-Credentials：是否允许携带cookie，默认情况下，cors不会携带cookie，除非这个值是true
+
+要想操作cookie，需要满足3个条件：
+服务的响应头中需要携带Access-Control-Allow-Credentials并且为true。
+浏览器发起ajax需要指定withCredentials 为true
+响应头中的Access-Control-Allow-Origin一定不能为*，必须是指定的域名

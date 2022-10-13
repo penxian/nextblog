@@ -1,6 +1,6 @@
 {% if page.posts.length and is_home() %}
   <div class="widget-wrap">
-    <h3 class="widget-title"> 近期文章 </h3>
+    <h3 class="widget-title"> {{__('recent_posts') }} </h3>
     <div class="widget">
       <ul>
         {% for post in page.posts.sort('date', -1).limit(5).toArray() %}

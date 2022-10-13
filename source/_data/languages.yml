@@ -1,0 +1,9 @@
+# language
+zh-CN:
+  menu:
+    photos: 相册
+  recent_posts: 最新文章
+en:
+  menu:
+     photos: photos
+  recent_posts: Recent Posts
