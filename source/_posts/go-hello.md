@@ -7,7 +7,7 @@ categories: Go
 
 ## 先下载Go安装包
 
-下载地址 [https://golang.google.cn/dl/](https://golang.google.cn/dl/)
+download地址官方网站自己搜索
 安装路径选择默认，安装完成后会{% label @自动帮你配置环境变量 %}不用自己配置了
 打开cmd 输入 go查看是否安装成功
 ![](https://webfan.obs.cn-south-1.myhuaweicloud.com/20221102012828.png)
@@ -38,7 +38,7 @@ go env -w GOPROXY=https://proxy.golang.com.cn,direct
 
 比如我的路径：/Users/shuirong/Code/Go
 
-###优秀的学习网站：
+### 优秀的学习网站：
 [Go网站导航](https://hao.studygolang.com/)
 [Go指南](https://tour.go-zh.org/list)
 [Go程序设计](https://www.yuque.com/qyuhen/go)
