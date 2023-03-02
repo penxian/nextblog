@@ -103,9 +103,9 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: sftp
-  host: 39.99.210.54
+  host: 
   user: root
-  pass: &Isoft741
+  pass: 
   privateKey: id_rsa
   remotePath: /www/wwwroot/webfan.cn
   port: 22
