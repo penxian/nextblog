@@ -50,9 +50,9 @@ darkmode: true
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
-  apple_touch_icon: /images/apple-touch-icon-next.png
+  small: http://cdn.webfan.cn/logoko_%E5%89%AF%E6%9C%AC.png
+  medium: http://cdn.webfan.cn/logoko_%E5%89%AF%E6%9C%AC.png
+  apple_touch_icon: http://cdn.webfan.cn/logoko_%E5%89%AF%E6%9C%AC.png
   safari_pinned_tab: /images/logo.svg
   #android_manifest: /manifest.json
 

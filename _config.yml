@@ -102,13 +102,13 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: sftp
+  type: 
   host: 
-  user: root
+  user: 
   pass: 
-  privateKey: id_rsa
-  remotePath: /www/wwwroot/webfan.cn
-  port: 22
+  privateKey: 
+  remotePath:
+  port: 
 
 symbols_count_time:
   symbols: true

@@ -3,18 +3,20 @@ title: ESP8266（nodeMUC）+华为IoT设备接入
 date: 2023-03-22 21:22:29
 tag: [IoT, nodeMUC]
 categories: [IoT, Lua]
+photos: 
+    https://webfan.obs.cn-south-1.myhuaweicloud.com/20230318002623.png
 ---
-# ESP8266（nodeMUC）+华为IOT设备接入
 
-ESP8266是一款高度集成的WiFi芯片，可以作为微控制器的一部分来控制其他设备。它可以通过串口连接到计算机，并通过编程实现控制。NodeMCU是一种基于ESP8266的开发板，使得使用ESP8266更加简单。使用NodeMCU，可以通过Lua编程语言来控制ESP8266。这种芯片和开发板非常适合物联网设备和远程控制应用程序。
+> ESP8266是一款高度集成的WiFi芯片，可以作为微控制器的一部分来控制其他设备。它可以通过串口连接到计算机，并通过编程实现控制。NodeMCU是一种基于ESP8266的开发板，使得使用ESP8266更加简单。使用NodeMCU，可以通过Lua编程语言来控制ESP8266。这种芯片和开发板非常适合物联网设备和远程控制应用程序。
 
 最近我想买一个来玩一下物联网的乐趣，然后买来一个最便宜最广泛的一个开发板，就是ESP8266，具有Wifi功能，然后想用MQTT协议连接华为云IOT代理，但是搜索了整个网络，都没有好的教程，要么就是刷的固件都是很老的，要么是AT固件，然后没有MQTT模块。今天我来记录我的一次教程。
-
+<!-- more -->
 # 1. 准备材料
 
 在淘宝上购买来ESP8266,大约12元钱左右
-
-![https://webfan.obs.cn-south-1.myhuaweicloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230321073133.jpg](https://webfan.obs.cn-south-1.myhuaweicloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230321073133.jpg)
+<div align="left" style="display: flex; justify-content: flex-start;">
+<img alt="淘宝淘的便宜货" src="https://webfan.obs.cn-south-1.myhuaweicloud.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230321073133.jpg" width="300px" style="margin:0">
+</div>
 
 接下来就是开始进行操作，先进去官网，官网是最好的教程说的没错
 
