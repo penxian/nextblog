@@ -1,8 +1,8 @@
 ---
-title: ESP8266（nodeMUC）+华为IoT设备接入
+title: ESP8266（nodeMUC）+ 华为IoT设备接入
 date: 2023-03-22 21:22:29
-tag: [IoT, nodeMUC]
-categories: [IoT, Lua]
+tag: [IoT, nodeMUC, Lua]
+categories: 物联网
 photos: 
     https://webfan.obs.cn-south-1.myhuaweicloud.com/20230318002623.png
 ---

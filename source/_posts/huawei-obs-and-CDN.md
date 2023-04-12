@@ -2,7 +2,7 @@
 title: 华为OBS+华为CDN+Hexo打造静态博客
 date: 2023-04-10 23:46:58
 tag: [OBS, CDN, 建站]
-categories: [华为云]
+categories: 华为云
 photos: 
     https://webfan.obs.cn-south-1.myhuaweicloud.com/house-7497001_640.png
 ---
@@ -72,7 +72,7 @@ CDN先申请证书，华为云有免费的证书，进入云正式管理服务CC
 
 过一会儿就申请成功。
 
-然后我们配置加速网站，在回到桶中，域名管理，改为配置加速域名，业务类型选择网站加速，下面还有其他信息，勾选静态网站开启。加速两个域名，一个是www.webfan.cn,一个是webfan.cn方便用户不适用www也能访问我们的网站。
+然后我们配置加速网站，在回到桶中，域名管理，改为配置加速域名，业务类型选择网站加速，下面还有其他信息，勾选静态网站开启。加速两个域名，一个是[https://www.webfan.cn](https://www.webfan.cn),一个是[https://webfan.cn](https://webfan.cn)方便用户不适用www也能访问我们的网站。
 
 ![https://webfan.obs.cn-south-1.myhuaweicloud.com/20230410231541.png](https://webfan.obs.cn-south-1.myhuaweicloud.com/20230410231541.png)
 
@@ -98,9 +98,9 @@ CDN先申请证书，华为云有免费的证书，进入云正式管理服务CC
 
 原因：在配置加速域名的时候忘记勾选来静态网站来
 
-问题二：https://www.webfan.cn可以访问，但是https://webfan.cn不能访问
+问题二：[https://www.webfan.cn](https://www.webfan.cn)可以访问，但是[https://webfan.cn](https://webfan.cn)不能访问
 
-原因：主要是CDN的webfan.cn的源站配置没有配置主站源，应该和www.webfan.cn配置一致。
+原因：主要是CDN的webfan.cn的源站配置没有配置主站源，应该和[https://www.webfan.cn](https://www.webfan.cn)配置一致。
 
 问题三：访问http无法跳转到https上去
 

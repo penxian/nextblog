@@ -1844,7 +1844,7 @@
 
 "js-yaml@^4.1.0":
   "integrity" "sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA=="
-  "resolved" "https://repo.huaweicloud.com/repository/npm/js-yaml/-/js-yaml-4.1.0.tgz"
+  "resolved" "https://mirrors.huaweicloud.com/repository/npm/js-yaml/-/js-yaml-4.1.0.tgz"
   "version" "4.1.0"
   dependencies:
     "argparse" "^2.0.1"

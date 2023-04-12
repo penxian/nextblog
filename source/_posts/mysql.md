@@ -2,7 +2,7 @@
 title: MySQL使用记录
 date: 2022-10-28 10:20:48
 tag: [MySQL]
-categories: 笔记
+categories: 数据库
 ---
 Mysql创建数据库字符集的选择
 字符集选择： 在国内正常都是用【UTF-8】

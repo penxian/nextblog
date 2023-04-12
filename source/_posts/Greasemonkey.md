@@ -1,7 +1,7 @@
 ---
 title: 笔记
 date: 2022-4-8
-tag: js
+tag: JavaScript
 categories: 工作日志
 ---
 

@@ -2,7 +2,7 @@
 title: LeetCode 两数相加
 date: 2022-11-23
 tag: [LeetCode, Go]
-categories: [LeetCode, Go]
+categories: LeetCode
 ---
 > 学习Go语言，准备使用LeetCode来熟悉Go语言的语法
 

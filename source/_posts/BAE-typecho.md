@@ -2,6 +2,7 @@
 title: 百度BAE部署typecho 1.0遇到的几个问题
 date: 2015-04-12 17:13
 tag: [百度BAE, typecho]
+categories: 建站
 ---
 1. **数据库密码和用户名不正确**
 由于BAE改版之后导致使用`getenv('HTTP_BAE_ENV_AK')`和`getenv('HTTP_BAE_ENV_SK')`不能正确的获取数据库名和密码，所以这里需要去BAE界面去获取

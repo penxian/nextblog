@@ -2,6 +2,7 @@
 title: ES7 and ES8 特性
 date: 2017-11-01 23:14
 tag: javascript
+categories: JavaScript
 ---
 最近我写了一篇博客文章,甚至做一篇关于ES6/ES2015在线课程。你猜怎么样？TC39-JavaScript最强势的监工-正在迈向ES8，所以让我们来了解下ES7 and ES8（官方称ES2016 and ES2017），幸运的是，他们比ES6标准功能少好多好多，真的，ES7只有2个新特性。
 <!-- more -->
