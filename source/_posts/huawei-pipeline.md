@@ -59,8 +59,100 @@ categories: 华为云
 新建规则，事件选择ObjectCreate,前缀是包名全程不含后缀，后缀默认zip，解压路径默认，IAM委托根据链接新建一个只容许操作OBS的全新
 ![](https://webfan.obs.cn-south-1.myhuaweicloud.com/20230411230957.png)
 
-## 🚀清除CDN缓存
+## 🚀清除CDN缓存, 使用函数工作流来
+1. 华为云新增一个函数工作流,函数类型是事件函数、区域我选广州、函数名自己取blogDeploy，运行时我选来14.18，现在有最新版本16了
+![](https://webfan.obs.cn-south-1.myhuaweicloud.com/20230413074227.png)
+2. 编写代码
 
-待写
+第一个文件index.js
+```javascript
+const refreshTask = require("./refreshTask")
+exports.handler = async (event, context) => {
+    const logger = context.getLogger();
+    const urls = context.getUserData('urls')
+    logger.info(JSON.stringify(event))
+    logger.info('刷新的地址', urls)
+    const token = context.getToken()
+    const t = await refreshTask(token, urls.split(';'))
+    const output =
+    {
+        'statusCode': 200,
+        'headers':
+        {
+            'Content-Type': 'application/json'
+        },
+        'isBase64Encoded': false,
+        'body': JSON.stringify(t),
+    }
+    return output;
+}
 
-好来一个完整的发布流程完整来，在本地我们写来一份MD，然后通过PUSH之后，过几分钟则可以看到自己写的内容已经自动部署到OBS了，非常方便。
+```
+第二个文件 refreshTask.js
+```javascript
+const https = require("https");
+
+function refreshTask(token, urls) {
+    return new Promise((resovle) => {
+        const data = JSON.stringify({
+            refresh_task: {
+                type: "directory",
+                urls
+            }
+        });
+        const options = {
+            port: 443,
+            hostname: "cdn.myhuaweicloud.com",
+            path: "/v1.0/cdn/content/refresh-tasks",
+            method: "POST",
+            headers: {
+                "X-Auth-Token": token,
+                "Content-Type": "application/json",
+                "Content-Length": data.length
+            }
+        };
+        const req = https.request(options, (response) => {
+            let todo = "";
+
+            // called when a data chunk is received.
+            response.on("data", (chunk) => {
+                todo += chunk;
+            });
+
+            // called when the complete response is received.
+            response.on("end", () => {
+                console.log(JSON.parse(todo));
+                resovle(JSON.parse(todo))
+            });
+        });
+        req.write(data);
+        req.on("error", (error) => {
+            console.log("Error: " + error.message);
+        });
+    })
+}
+
+module.exports = refreshTask;
+
+```
+![](https://webfan.obs.cn-south-1.myhuaweicloud.com/20230413074730.png)
+
+3. 设置环境变量和触发器,环境变量设置为urls，值为`https://www.webfan.cn/;https://webfan.cn/`你需要刷新你的域名
+![](https://webfan.obs.cn-south-1.myhuaweicloud.com/20230413074903.png)
+触发器设置为OBS触发,桶名：放博客的桶，事件是ObjectCreated，名字自取，前缀index，后缀html，我们只识别index.html即可
+![](https://webfan.obs.cn-south-1.myhuaweicloud.com/20230413075120.png)
+
+4. 设置权限托管，我们OBS需要获取token来请求CDN服务，所以需要委托代理授权
+点击权限---创建委托，委托名字自己取，委托类型选云服务，云服务选择搜索函数工作流，持续时间永久
+![](https://webfan.obs.cn-south-1.myhuaweicloud.com/20230413075727.png)
+然后下一步选择授权项目CDN RefreshAndPreheatAccess，点击完成，可以查看到自己权限可以使用 CDN RefreshAndPreheatAccess
+![](https://webfan.obs.cn-south-1.myhuaweicloud.com/20230413075958.png)
+然后在选择委托保存
+![](https://webfan.obs.cn-south-1.myhuaweicloud.com/20230413080107.png)
+
+然后在自己配置测试OBS
+![](https://webfan.obs.cn-south-1.myhuaweicloud.com/20230413080322.png)
+查看日志
+![](https://webfan.obs.cn-south-1.myhuaweicloud.com/20230413080440.png)
+
+好来一个完整的发布流程完整来，在本地我们写来一份MD，然后通过PUSH之后，过几分钟则可以看到自己写的内容已经自动部署到OBS了，然后网站自动刷新缓存，非常方便。
