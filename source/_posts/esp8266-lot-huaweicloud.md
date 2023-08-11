@@ -4,7 +4,7 @@ date: 2023-03-22 21:22:29
 tag: [IoT, nodeMUC, Lua]
 categories: 物联网
 photos: 
-    https://webfan.obs.cn-south-1.myhuaweicloud.com/20230318002623.png
+    http://webfan.obs.cn-south-1.myhuaweicloud.com/20230318002623.png
 ---
 
 > ESP8266是一款高度集成的WiFi芯片，可以作为微控制器的一部分来控制其他设备。它可以通过串口连接到计算机，并通过编程实现控制。NodeMCU是一种基于ESP8266的开发板，使得使用ESP8266更加简单。使用NodeMCU，可以通过Lua编程语言来控制ESP8266。这种芯片和开发板非常适合物联网设备和远程控制应用程序。
