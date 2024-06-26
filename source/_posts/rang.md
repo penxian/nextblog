@@ -1,7 +1,7 @@
 ---
 title: JavaScript实现range方法
 date: 2022-06-30 23:36:57
-tag: Javascript
+tag: JavaScript
 categories: 代码片段
 updated: 2022-07-01 23:18:03
 ---

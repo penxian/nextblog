@@ -1,7 +1,7 @@
 ---
 title: seajs获取jquery为空
 date: 2015-04-09 14:37
-tag: javascript
+tag: JavaScript
 categories: 工作日志
 ---
 
