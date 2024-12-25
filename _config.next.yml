@@ -29,7 +29,7 @@ custom_file_path:
   bodyEnd: source/_data/body-end.njk
   #variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
-  #style: source/_data/styles.styl
+  style: source/_data/styles.styl
 
 # ---------------------------------------------------------------
 # Scheme Settings
@@ -177,7 +177,10 @@ links_settings:
   layout: block
 
 links:
-  #Title: https://example.com
+  通义: https://tongyi.aliyun.com/qianwen/
+  web电风扇: https://webfan.cn/
+  202512: https://202512.xyz/
+  webfan: https://webfans.xyz/
 
 # Table of Contents in the Sidebar
 # Front-matter variable (nonsupport wrap expand_all).
@@ -280,14 +283,15 @@ follow_me:
   #Twitter: https://twitter.com/username || fab fa-twitter
   #Telegram: https://t.me/channel_name || fab fa-telegram
   #WeChat: /images/wechat_channel.jpg || fab fa-weixin
+  Zhihu: https://www.zhihu.com/people/peng-cheng-12 || fab fa-zhihu
   #RSS: /atom.xml || fa fa-rss
 
 # Related popular posts
 # Dependencies: https://github.com/sergeyzwezdin/hexo-related-posts
 related_posts:
-  enable: false
+  enable: true
   title: # Custom header, leave empty to use the default one
-  display_in_home: false
+  display_in_home: true
 
 # Post edit
 # Easily browse and edit blog source code online.

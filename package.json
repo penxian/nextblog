@@ -28,6 +28,7 @@
     "hexo-theme-landscape": "^1.0.0",
     "hexo-theme-next": "^8.21.1",
     "hexo-word-counter": "^0.2.0",
+    "hexo-related-posts": "^1.5.2",
     "js-yaml": "^4.1.0"
   },
   "devDependencies": {}
