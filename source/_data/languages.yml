@@ -3,9 +3,11 @@ zh-CN:
   menu:
     photos: 相册
     travelling: 来往
+    ai: AI 导航
   recent_posts: 最新文章
 en:
   menu:
      photos: photos
      travelling: Travelling
+     ai: AI
   recent_posts: Recent Posts

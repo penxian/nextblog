@@ -25,7 +25,7 @@ date: 2020-04-14 22:23:18
 
 <ul class=\"about-meta\">
   <li>本科 · 男</li>
-  <li>个人站点：<a href=\"https://www.soogf.com\" target=\"_blank\">https://www.soogf.com</a></li>
+  <li>个人站点：<a href="https://www.soogf.com" target="_blank">https://www.soogf.com</a></li>
 </ul>
 
 <h2 class=\"about-section-title\">个人优势</h2>
